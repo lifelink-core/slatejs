@@ -1,0 +1,35 @@
+{
+  "name": "slate",
+  "version": "0.0.1",
+  "description": "JavaScript Slate Workflow Controller",
+  "main": "src/slate.js",
+  "homepage": "https://github.com/ssmccoy/blackboardjs",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ssmccoy/slatejs.git"
+  },
+  "keywords": [
+    "blackboard"
+  ],
+  "author": {
+    "name": "Scott S. McCoy",
+    "email": "tag@cpan.org"
+  },
+  "contributors": [
+      {
+          "name": "Martin Atkins",
+          "email": "mart@degeneration.co.uk"
+      }
+  ],
+  "license": "Artistic License",
+  "devDependencies": {
+    "jshint-junit-reporter": "",
+    "fate": "",
+    "grunt": "",
+    "grunt-contrib-jshint": "",
+    "grunt-contrib-uglify": "",
+    "grunt-contrib-jasmine": "~0.5.2",
+    "grunt-template-jasmine-requirejs": "",
+    "grunt-karma": ""
+  }
+}
