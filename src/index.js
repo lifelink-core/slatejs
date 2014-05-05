@@ -1,27 +1,18 @@
 var requirejs = require('requirejs');
+// This is taken almost wholesale from http://requirejs.org/docs/node.html
+// under "Building node modules with AMD or RequireJS"
 
 requirejs.config({
-    //Use node's special variable __dirname to
-    //get the directory containing this file.
-    //Useful if building a library that will
-    //be used in node but does not require the
-    //use of node outside
+    /* In node, use a base URL of the directory that contains this file */
     baseUrl: __dirname,
 
-    //Pass the top-level main.js/index.js require
-    //function to requirejs so that node modules
-    //are loaded relative to the top-level JS file.
+
     nodeRequire: require
 });
 
-//foo and bar are loaded according to requirejs
-//config, and if found, assumed to be an AMD module.
-//If they are not found via the requirejs config,
-//then node's require is used to load the module,
-//and if found, the module is assumed to be a
-//node-formatted module. Note: this synchronous
-//style of loading a module only works in Node.
+
 var Slate = requirejs('slate');
 
 //Now export a value visible to Node.
 module.exports = Slate;
+
