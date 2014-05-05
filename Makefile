@@ -1,4 +1,6 @@
-VERSION := $(shell sed '/version/ b e; d; b; :e s/ *"version": "\([^"]*\)",/\1/ ' package.json)
+SHELL = sh
+VERSSION := $(shell sed -n 's/ *"version": "\([^"]*\)",/\1/p;' package.json)
+PATH   := $(PWD)/node_modules/.bin:$(PATH)
 
 blackboardjs-$(VERSION).tgz:
 	npm pack

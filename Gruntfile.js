@@ -15,7 +15,7 @@ module.exports = function (grunt) {
 
         jasmine: {
             unit: {
-                src: 'src/**/*.js',
+                src: 'src/**/slate.js',
                 options: {
                     specs: 'tests/*.js',
                     template: require('grunt-template-jasmine-requirejs'),
