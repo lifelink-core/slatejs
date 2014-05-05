@@ -2,7 +2,7 @@
   "name": "slate",
   "version": "0.0.1",
   "description": "JavaScript Slate Workflow Controller",
-  "main": "src/slate.js",
+  "main": "src/index.js",
   "homepage": "https://github.com/ssmccoy/blackboardjs",
   "repository": {
     "type": "git",
@@ -22,7 +22,11 @@
       }
   ],
   "license": "Artistic License",
+  "dependencies": {
+"requirejs": "*"
+  },
   "devDependencies": {
+      "requirejs": "*",
     "jshint-junit-reporter": "",
     "fate": "",
     "grunt": "",
