@@ -26,6 +26,7 @@
     "jshint-junit-reporter": "",
     "fate": "",
     "grunt": "",
+    "grunt-cli": "",
     "grunt-contrib-jshint": "",
     "grunt-contrib-uglify": "",
     "grunt-contrib-jasmine": "~0.5.2",
