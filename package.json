@@ -23,10 +23,10 @@
   ],
   "license": "Artistic License",
   "dependencies": {
-"requirejs": "*"
+    "requirejs": "*"
   },
   "devDependencies": {
-      "requirejs": "*",
+    "requirejs": "*",
     "jshint-junit-reporter": "",
     "fate": "",
     "grunt": "",
