@@ -22,7 +22,7 @@ define(function () {
      *
      * @param providers A list of promise providers.
      */
-    return function Slate (providers) {
+    return function Slate (providers, Promise) {
         var promises = {};
 
         /**
@@ -53,7 +53,7 @@ define(function () {
                 var depPromises = [];
 
                 for (var i = 0; i < deps.length; i++) {
-                    depPromises.push(this.resolve(deps[i]));
+                    depPromises.push(this.get(deps[i]));
                 }
 
                 promises[key] = Promise.all(depPromises).then(
@@ -80,7 +80,7 @@ define(function () {
          * Create a new slate, exactly like this one, with no values.
          */
         this.clone = function () {
-            return new Slate(providers);
+            return new Slate(providers, Promise);
         };
     };
 });
