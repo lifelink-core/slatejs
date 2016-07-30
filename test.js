@@ -11,7 +11,8 @@
     requirejs.config({
         baseUrl: '/base',
         paths: {
-            slate: 'src/slate'
+            slate: 'src/slate',
+            'native-promise-only': 'node_modules/native-promise-only/npo'
         },
 
         deps: testModules,

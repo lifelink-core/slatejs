@@ -22,6 +22,7 @@ module.exports = function(config) {
     files: [
       { pattern: 'src/*.js', included: false },
       { pattern: 'tests/*.js', included: false },
+      { pattern: 'node_modules/native-promise-only/npo.js', included: false },
       'test.js'
     ],
 

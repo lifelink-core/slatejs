@@ -30,6 +30,9 @@
     "karma-cli": "",
     "karma-jasmine": "",
     "karma-phantomjs-launcher": "",
-    "karma-requirejs": ""
+    "karma-requirejs": "",
+    "native-promise-only": "",
+    "requirejs": "",
+    "jasmine-core": ""
   }
 }
