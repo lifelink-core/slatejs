@@ -1,4 +1,4 @@
-require( [ "slate" ],
+define( [ "slate" ],
     function (Slate, Promiser) {
         describe( "Slate tests", function () {
             it( "Constructor!", function () {
