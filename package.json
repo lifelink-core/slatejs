@@ -24,7 +24,7 @@
       "email": "mart@degeneration.co.uk"
     }
   ],
-  "license": "Artistic License",
+  "license": "MIT",
   "devDependencies": {
     "karma": "",
     "karma-cli": "",
