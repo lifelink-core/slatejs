@@ -1,3 +1,8 @@
+if (typeof define !== 'function') {
+    // Support Node use without RequireJS
+    var define = require('amdefine')(module);
+}
+
 define(function () {
     /**
      * An unsatisifiable condition exists.

@@ -2,7 +2,7 @@
   "name": "slate",
   "version": "0.0.1",
   "description": "JavaScript Slate Workflow Controller",
-  "main": "src/index.js",
+  "main": "src/slate",
   "homepage": "https://github.com/ssmccoy/blackboardjs",
   "scripts": {
     "test": "karma start --single-run"
@@ -19,10 +19,10 @@
     "email": "tag@cpan.org"
   },
   "contributors": [
-      {
-          "name": "Martin Atkins",
-          "email": "mart@degeneration.co.uk"
-      }
+    {
+      "name": "Martin Atkins",
+      "email": "mart@degeneration.co.uk"
+    }
   ],
   "license": "Artistic License",
   "devDependencies": {
@@ -34,5 +34,8 @@
     "native-promise-only": "",
     "requirejs": "",
     "jasmine-core": ""
+  },
+  "dependencies": {
+    "amdefine": "^1.0.1"
   }
 }
