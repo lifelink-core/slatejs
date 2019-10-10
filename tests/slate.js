@@ -38,6 +38,29 @@ define( [ "slate", "native-promise-only" ],
                     done();
                 });
             });
+
+            it( "supports put add/clear", function (done) {
+                var providers = {
+                    second: [
+                        ["first"],
+                        function (d) { return d.first + "2"; }
+                    ]
+                };
+                var slate = new Slate(providers, Promiser)
+
+                slate.put("first", Promise.resolve("1"));
+
+                slate.get("second").then(function(d) {
+                    expect(d).toBe("12");
+
+                    slate.clear();
+                    slate.put("first", Promise.resolve("one"));
+                    slate.get("second").then(function (dd) {
+                        expect(dd).toBe("one2");
+                        done();
+                    });
+                });
+            })
         });
     }
 );

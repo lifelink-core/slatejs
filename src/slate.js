@@ -76,6 +76,20 @@ define(function () {
         };
 
         /**
+         * Add a key/promise pair
+         *
+         * <p>Allow the reusable providers to be supplimented/overwritten with
+         * keys and promises that are reset when clear is called.<p>
+         *
+         * @param key The key to add to the providers.
+         * @param promise The value to add to the providers under the key.
+         * @return The promise that was passed as a parameter.
+         */
+        this.put = function (key, promise) {
+          promises[key] = promise;
+        };
+
+        /**
          * Clean the slate.
          *
          * <p>Remove all the existing promises from this slate, so that they
