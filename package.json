@@ -26,14 +26,15 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "jasmine-core": "",
     "karma": "",
+    "karma-chrome-launcher": "^3.1.0",
     "karma-cli": "",
     "karma-jasmine": "",
-    "karma-phantomjs-launcher": "",
     "karma-requirejs": "",
     "native-promise-only": "",
-    "requirejs": "",
-    "jasmine-core": ""
+    "puppeteer": "^1.20.0",
+    "requirejs": ""
   },
   "dependencies": {
     "amdefine": "^1.0.1"

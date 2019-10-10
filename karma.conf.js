@@ -5,7 +5,7 @@ module.exports = function(config) {
   config.set({
     plugins: [
       'karma-jasmine',
-      'karma-phantomjs-launcher',
+      'karma-chrome-launcher',
       'karma-requirejs'
     ],
 
@@ -63,7 +63,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: ['ChromeHeadless'],
 
 
     // Continuous Integration mode
