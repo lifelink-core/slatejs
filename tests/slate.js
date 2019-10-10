@@ -11,30 +11,30 @@ define( [ "slate", "native-promise-only" ],
                 var providers = {
                     last: [
                         ["first", "second", "third"],
-                        function (first, second, third) {
-                            return Promiser.resolve(first + second + third);
+                        function (d) {
+                            return Promiser.resolve(d.first + d.second + d.third);
                         }
                     ],
                     third: [
-                        [], function () { return Promiser.resolve("third"); }
+                        [], function () { return Promiser.resolve("3"); }
                     ],
                     second: [
-                        [], function () { return Promiser.resolve("second"); }
+                        [], function () { return Promiser.resolve("2"); }
                     ],
                     first: [
-                        [], function () { return Promiser.resolve("first"); }
+                        [], function () { return Promiser.resolve("1"); }
                     ],
                     all: [
                         ["last"],
-                        function (last) {
-                            return Promiser.resolve(last);
+                        function (d) {
+                            return Promiser.resolve(d.last);
                         }
                     ]
                 };
                 var slate = new Slate(providers, Promiser);
 
                 slate.get("all").then(function (all) {
-                    expect(all).toBe("firstsecondthird");
+                    expect(all).toBe("123");
                     done();
                 });
             });

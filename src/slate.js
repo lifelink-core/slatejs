@@ -63,7 +63,11 @@ define(function () {
 
                 promises[key] = Promise.all(depPromises).then(
                     function (depValues) {
-                        return impl.apply(context, depValues);
+                        var depObj = {};
+                        for (var j = 0; j < deps.length; j++) {
+                          depObj[deps[j]] = depValues[j];
+                        }
+                        return impl.apply(context, [depObj]);
                     }
                 );
             }
